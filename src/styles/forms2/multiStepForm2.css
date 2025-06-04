@@ -1,0 +1,301 @@
+/* 🔹 Main Form Wrapper */
+.form-wrapper2 {
+    background: linear-gradient(160deg, rgba(204, 255, 244, 0.7), rgba(232, 245, 233, 0.7));
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 20px 20px;
+}
+
+/* 🔹 Step Card (Fixed Size for Consistency) */
+.step-card2 {
+    width: 720px;
+    height: 460px; /* 🔹 Fixed height to prevent layout shifting */
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* 🔹 Ensures even spacing inside */
+}
+
+/* 🔹 Progress Bar */
+.progress-container2 {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto 15px;
+    position: relative;
+    gap: 3%;
+}
+
+
+
+/* 🔹 Individual Steps */
+.step2 {
+    width: 90px;
+    height: 4px;
+    background: #ddd;
+    transition: background 0.3s ease-in-out;
+}
+
+.step2.active {
+    background: #0aad0a;
+}
+
+/* 🔹 Heading (Consistent Spacing) */
+.step-heading2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* 🔹 Selection Container (Ensures Even Spacing) */
+.selection-container2 {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 10px 0;
+}
+
+/* 🔹 Selection Buttons */
+.selection-btn2 {
+    padding: 12px 30px;
+    border-radius: 25px;
+    border: 2px solid #28a745;
+    background: white;
+    color: #28a745;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+    min-width: 120px;
+}
+
+.selection-btn2.selected {
+    background: #28a745;
+    color: white;
+}
+
+/* 🔹 Grid Layout for Selection Buttons */
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+/* 🔹 Input Field */
+.input-container2 {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.input-field2 {
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+}
+
+/* 🔹 Back & Next Buttons */
+.button-container2 {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: auto;
+
+    display: flex;
+    justify-content: space-between; /* 🔹 Back on Left, Next on Right */
+    align-items: center;
+    width: 100%;
+    margin-top: auto;
+}
+
+.steps-back-btn2,
+.steps-next-btn2 {
+    border-radius: 30px;
+    padding: 12px 40px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.steps-back-btn2 {
+    background: white;
+    color: #28a745;
+    border: 2px solid #28a745;
+}
+
+.steps-back-btn2:hover {
+    background: #28a745;
+    color: white;
+}
+
+.steps-next-btn2 {
+    background: #28a745;
+    color: white;
+    border: none;
+}
+
+.steps-next-btn2:hover {
+    transform: scale(1.05);
+}
+
+/* 🔹 Mobile Optimization */
+@media (max-width: 768px) {
+    .step-card2 {
+        width: 95%;
+        height: auto; /* 🔹 Adjust height for smaller screens */
+        padding: 25px;
+    }
+
+    .progress-container2 {
+        width: 90%;
+    }
+
+    .selection-container2 {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .grid-layout {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .button-container2 {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+
+
+/* 🔹 Gender Selection Container */
+.gender-selection2 {
+    display: flex;
+    align-items: center; /* 🔹 Keeps "Gender:" text and buttons aligned */
+    justify-content: center;
+    gap: 10px; /* 🔹 Adds space between text and buttons */
+    margin-bottom: 15px; /* 🔹 Prevents pushing content down */
+}
+
+/* 🔹 Gender Buttons */
+.gender-btn2 {
+    padding: 10px 20px; /* 🔹 Reduced padding to prevent oversized buttons */
+    border-radius: 25px;
+    border: 2px solid #28a745;
+    background: white;
+    color: #28a745;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+    min-width: 100px;
+    max-width: 120px; /* 🔹 Prevents buttons from getting too wide */
+}
+
+/* 🔹 Selected Gender Button */
+.gender-btn2.selected {
+    background: #28a745;
+    color: white;
+}
+
+/* 🔹 Prevent Outline on Click */
+.gender-btn2:focus,
+.gender-btn2:active {
+    outline: none;
+    box-shadow: none;
+}
+
+/* 🔹 Ensure Content Doesn't Overflow */
+@media (max-width: 768px) {
+    .gender-selection2 {
+        flex-direction: row; /* Keeps buttons side-by-side on mobile */
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .gender-btn2 {
+        min-width: 90px; /* 🔹 Adjust button width for smaller screens */
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+
+
+/* 🔹 Button Container (Default: Back Left, Next Right) */
+.button-container2 {
+    display: flex;
+    justify-content: space-between; /* 🔹 Back on Left, Next on Right */
+    align-items: center;
+    width: 100%;
+    margin-top: auto;
+    padding: 0 20px;
+}
+
+/* 🔹 Special Case: No Back Button, Force "Next" to Right */
+.button-container2.single-btn {
+    justify-content: flex-end; /* 🔹 Moves "Next" to the right */
+}
+
+/* 🔹 Back & Next Buttons */
+.steps-back-btn2,
+.steps-next-btn2 {
+    border-radius: 30px;
+    padding: 12px 40px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.steps-back-btn2 {
+    background: white;
+    color: #28a745;
+    border: 2px solid #28a745;
+}
+
+.steps-back-btn2:hover {
+    background: #28a745;
+    color: white;
+}
+
+.steps-next-btn2 {
+    background: #28a745;
+    color: white;
+    border: none;
+}
+
+.steps-next-btn2:hover {
+    transform: scale(1.05);
+}
+
+.button-container2.center-btn {
+    justify-content: center; /* 🔹 Moves "Continue" button to center */
+}
+
+/* 🔹 Mobile Optimization */
+@media (max-width: 768px) {
+    .button-container2 {
+        flex-direction: row;
+        padding: 0;
+    }
+
+    .button-container2.single-btn {
+        justify-content: flex-end; /* 🔹 Keeps "Next" aligned right on mobile too */
+    }
+}

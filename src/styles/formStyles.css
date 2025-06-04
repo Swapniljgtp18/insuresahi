@@ -1,0 +1,112 @@
+/* Form Box */
+  .term-form-container {
+    background: white;
+    /* padding: 40px; */
+    padding: 15px;
+    border-radius: 15px;  
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+    margin-top: 8%;
+    border: 1px solid green;
+  }
+  
+  /* Header Title */
+  .term-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #1c7c35;
+    margin-bottom: 15px;
+  }
+  
+  /* Input Fields */
+  .term-input {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: 0.3s ease;
+    background-color: #fff;
+  }
+  
+  .term-input:focus {
+    border-color: #1c7c35;
+    outline: none;
+    box-shadow: 0 0 6px rgba(28, 124, 53, 0.3);
+  }
+  
+  /* Gender Selection */
+  .term-gender-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 15px 0;
+  }
+  
+  .term-gender-btn {
+    padding: 10px 25px;
+    font-size: 16px;
+    border-radius: 30px;
+    border: 2px solid #ddd;
+    background: white;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .term-gender-btn.active {
+    background-color: #1c7c35;
+    color: white;
+    border: 2px solid #1c7c35;
+    box-shadow: 0px 4px 10px rgba(28, 124, 53, 0.2);
+  }
+  
+  /* Continue Button */
+  .term-btn {
+    background-color: #1c7c35;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 50px;
+    font-size: 18px;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .term-btn:hover {
+    background-color: #155a27;
+  }
+  
+  /* Terms & Conditions */
+  .term-text {
+    font-size: 12px;
+    color: #888;
+    margin-top: 15px;
+  }
+  
+  .term-text a {
+    color: #1c7c35;
+    text-decoration: none;
+  }
+  
+  .term-text a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .term-form-container {
+      max-width: 90%;
+      padding: 30px;
+    }
+    .term-btn {
+      font-size: 16px;
+      padding: 12px;
+    }
+  }
+  
+
+

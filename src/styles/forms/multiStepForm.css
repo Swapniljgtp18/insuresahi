@@ -1,0 +1,330 @@
+.step-card {
+    width: 720px;
+    height: 440px;
+    background: white;
+    padding: 60px;
+    border-radius: 10px;
+    border: 1px solid gray;
+  }
+
+.form-wrapper {
+    background: linear-gradient(160deg, rgba(204, 255, 244, 0.7), rgba(232, 245, 233, 0.7));
+    width: 100%; /* Full width */
+    height: 100vh; /* Full height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Centering button at the bottom */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    gap: 20px; /* Increased space between Back & Next buttons */
+  }
+  
+  /* Styled Next button */
+.steps-next-button {
+    background-color: #0aad0a;
+    color: white;
+    border-radius: 50px; /* Rounded edges */
+    padding: 12px 40px; /* Adjusted size */
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+.steps-next-button:hover {
+    transform: scale(1.05); /* Slight hover effect */
+  }
+  
+  /* Progress bar container */
+.progress-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 400px; /* Adjust width as needed */
+    margin: 20px auto;
+    position: relative;
+}
+  
+/* Step lines */
+.progress-container::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #ddd; /* Default background */
+    transform: translateY(-50%);
+    z-index: -1;
+}
+  
+  /* Individual steps */
+.step {
+    width: 90px;
+    height: 4px;
+    background: #ddd; /* Default inactive color */
+    transition: background 0.3s ease-in-out;
+}
+  
+  /* Active step */
+.step.active {
+    background: #0aad0a; /* Green active step */
+}
+  
+/* step 1 ======================================================================= */
+/* City Buttons Container */
+.steps-city-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+  
+  /* Individual City Buttons */
+  .steps-city-btn {
+    background: transparent;
+    border: 1px solid #0aad0a;
+    color: #0aad0a;
+    border-radius: 30px;
+    padding: 3px 0px;
+    transition: all 0.3s ease;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  
+  
+  .steps-city-btn.selected {
+    background: #0aad0a;
+    color: white;
+  }
+  
+
+  .steps-city-btn:focus,
+  .steps-city-btn:active {
+    box-shadow: none;
+    outline: none;
+  }
+  
+
+ 
+.steps-back-btn {
+    background: transparent;
+    color: #0aad0a;
+    border: 2px solid #0aad0a;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .steps-back-btn:hover {
+    background: #0aad0a;
+    color: white;
+  }
+  
+ 
+  .steps-next-btn {
+    background: #0aad0a;
+    color: white;
+    border-radius: 30px;
+    padding: 12px 40px;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .steps-next-btn:hover {
+    transform: scale(1.05);
+  }
+  
+  
+  .steps-back-btn:focus,
+  .steps-back-btn:active,
+  .steps-next-btn:focus,
+  .steps-next-btn:active {
+    box-shadow: none;
+    outline: none;
+  }
+  
+
+
+
+   /* Step 4 - Subtitle */
+.step-subtitle {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 2px;
+    font-weight: bold;
+  }
+  
+  /* Disease Buttons Container */
+  .steps-disease-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-bottom: 0px;
+  }
+  
+  /* Disease Selection Buttons */
+  .steps-disease-btn {
+    background: white;
+    border: 1px solid #0aad0a;
+    color: #0aad0a;
+    border-radius: 30px;
+    padding: 8px 10px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-align: center;
+    cursor: pointer;
+    font-size: 12px;
+  }
+  
+  /* Selected Disease Button */
+  .steps-disease-btn.selected {
+    background: #0aad0a;
+    color: white;
+  }
+  
+  /* Button Container */
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    gap: 20px;
+  }
+  
+  /* Next Button */
+  .steps-next-btn {
+    background-color: #0aad0a;
+    color: white;
+    border-radius: 30px;
+    padding: 12px 40px;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .steps-next-btn:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Back Button */
+  .steps-back-btn {
+    background: transparent;
+    color: #0aad0a;
+    border: 2px solid #0aad0a;
+  }
+  
+  .steps-back-btn:hover {
+    background: #0aad0a;
+    color: white;
+  }
+  
+  /* Prevent Default Button Focus Effects */
+  .steps-btn:focus,
+  .steps-btn:active {
+    box-shadow: none;
+    outline: none;
+  }
+  
+
+  /* Popup Box Styling */
+.popup-box {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 350px;
+    margin: auto;
+  }
+  
+  /* Popup Text */
+  .popup-text {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* Centered Modal */
+  .modal-content {
+    border-radius: 15px;
+    text-align: center;
+    padding: 20px;
+  }
+  
+
+ /* WelcomeStepForm.jsx ============================================================== */
+
+
+
+ .welcome-heading {
+    font-size: 25px; /* Decreased from previous size */
+    font-weight: bold;
+    text-align: center;
+  }
+  
+.discount-text {
+    color: #28a745;
+    font-weight: bold;
+  }
+  
+  /* 🔹 Member Selection Buttons */
+  .member-selection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    
+  }
+  
+  .member-btn {
+    padding: 10px 20px;
+    border: 2px solid #28a745;
+    background: white; 
+    color: #28a745;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .member-btn.selected {
+    background: #28a745;
+    color: white;
+  }
+  
+  /* 🔹 View More Members */
+  .view-more-text {
+    color: #28a745;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-bottom: 15px;
+  }
+  
+  /* 🔹 Terms & Conditions */
+  .terms-text {
+    font-size: 12px;
+    color: gray;
+    margin-top: 10px;
+  }
+  
+  .terms-link {
+    color: #28a745;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+
+  

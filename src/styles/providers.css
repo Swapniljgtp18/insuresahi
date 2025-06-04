@@ -1,0 +1,502 @@
+/* GENERAL LAYOUT */
+.providers-container {
+    display: flex;
+    background-color: #f7f7f7;
+    min-height: 100vh;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 10vh;
+    /* Responsive spacing, no padding-top needed */
+}
+
+/* LEFT SIDEBAR */
+.provider-sidebar {
+    width: 25%;
+    /* Increased from 20% for better alignment */
+    min-height: 100vh;
+    padding: 20px;
+    background: rgba(197, 255, 225, 0.20);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* CARDS */
+.card {
+    padding: 15px;
+    border-radius: 16px;
+    border: 1px solid rgba(25, 173, 98, 0.20);
+    background: #FFF;
+}
+
+.card .provd-vehicle-name {
+    color: #0D1B2A;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 4px 0 0;
+}
+
+.card .provd-vehicle-details {
+    color: #909AA8;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 2px 0 0;
+}
+
+
+.provd-checkbox-input {
+    color: #909AA8;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.provd-head {
+    display: flex;
+    align-items: center;
+    color: #0D1B2A;
+    font-family: Manrope !important;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    gap: 12px; /* Adjust spacing between icon and text */
+    margin: 0;
+}
+.provd-header {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Space between icon and text */
+
+   
+  }
+  
+.provd-icon {
+    width: 30px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 3px;
+  }
+
+  .provd-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Ensures vertical alignment */
+  }
+
+
+.highlight-price {
+    color: #0D1B2A;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+/* MAIN CONTENT */
+.main-content {
+    width: 55%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* FILTERS */
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    justify-content: space-between;
+    /* Centered for better layout */
+    margin-bottom: 20px;
+
+
+  
+   
+    flex-grow: 1;  /* Makes sure the dropdowns take up available space */
+   
+}
+
+/* DROPDOWN FILTERS */
+.filter-dropdown {
+    background: white;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 170px;
+    /* Fixed width */
+    text-align: left;
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
+   
+}
+
+.filter-dropdown:focus {
+    outline: 2px solid #04cb66;
+}
+
+/* TABS */
+.tabs {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.tab {
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tab.active {
+    color: #04cb66;
+    border-bottom: 2px solid #04cb66;
+}
+
+/* PLANS SECTION */
+.plans-title {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    /* Centered for better layout */
+}
+
+.plans-subtitle {
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+    /* Centered */
+}
+
+/* PLAN CARD */
+.plan-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border: 1px solid #e0e0e0;
+}
+
+.plan-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* PROVIDER LOGO */
+.provider-logo {
+    width: 50px;
+    height: auto;
+}
+
+
+
+.plan-info {
+    display: flex;
+    flex-direction: column;
+}
+
+/* MIDDLE SECTION */
+.plan-middle {
+    flex-grow: 1;
+}
+
+/* RIGHT SECTION */
+.plan-right {
+    min-width: 200px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .plan-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .plan-right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .provd-provd-buy-button {
+        width: 100%;
+    }
+}
+/* IDV DETAILS */
+.idv-label {
+    font-size: 12px;
+    color: #666;
+}
+
+.idv-value {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* ADD-ONS */
+.add-ons {
+    color: #04cb66;
+    font-size: 14px;
+}
+
+/* BUY BUTTON */
+.provd-buy-button {
+    background-color: #28a745;
+    color: white;
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.provd-buy-button:hover {
+    background-color: #218838;
+}
+
+/* -------------------------------------------- */
+/* RIGHT SIDEBAR */
+.right-sidebar {
+    width: 25%;
+    /* Increased from 20% for better alignment */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* WHY BUY SECTION */
+.why-buy {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+
+    border: 1px solid lightgreen;
+}
+
+
+
+/* Style for the list container */
+.why-buy-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* List items */
+.why-buy-list li {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    /* Adjust size as needed */
+    color: #333;
+    margin-bottom: 12px;
+    font-weight: 500;
+
+}
+
+/* List icon (replaces checkmark) */
+.list-icon {
+    width: 18px;
+    /* Adjust size of image */
+    height: 18px;
+    margin-right: 10px;
+    /* Space between icon & text */
+}
+
+
+/* ==================== */
+/* ✅ RESPONSIVENESS */
+/* ==================== */
+@media (max-width: 1024px) {
+    .providers-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .provider-sidebar,
+    .right-sidebar {
+        width: 90%;
+        min-height: auto;
+    }
+
+    .main-content {
+        width: 90%;
+    }
+
+    .filters {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .filter-dropdown {
+        width: auto;
+    }
+
+    .plan-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .provd-buy-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .filters {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .filter-dropdown {
+        width: 100%;
+    }
+
+    .plans {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .plan-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .provd-buy-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .plans-title {
+        font-size: 16px;
+    }
+
+    .plan-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .provider-logo {
+        width: 40px;
+    }
+
+    .provd-buy-button {
+        width: 100%;
+    }
+
+    .filters {
+        flex-direction: column;
+    }
+
+    .filter-dropdown {
+        width: 100%;
+    }
+}
+
+/* FILTERS CONTAINER */
+.filters-container {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 30px;
+    padding: 12px 20px;
+    gap: 15px;
+  
+    width: 100%;
+    max-width: 900px;  /* Ensures it doesn't stretch too much */
+    margin: 0 auto;
+    border: 1px solid #ddd; /* Light border for the rounded look */
+}
+
+/* FILTERS HEADER (WITH ICON) */
+.filters-header {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* FILTER ICON */
+.filter-icon {
+    font-size: 18px;
+    color: #666;
+    cursor: pointer;
+}
+
+/* FILTERS (DROPDOWNS WRAPPER) */
+.filters {
+    display: flex;
+    gap: 12px;
+    flex-grow: 1;  /* Makes sure the dropdowns take up available space */
+    justify-content: space-between;
+}
+
+/* DROPDOWN FILTERS */
+.filter-dropdown {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 170px;  /* Fixed width to ensure uniformity */
+    text-align: left;
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
+  
+}
+
+/* ON FOCUS */
+.filter-dropdown:focus {
+    outline: 2px solid #04cb66;
+}
+
+/* RESPONSIVE: Ensures dropdowns stack on smaller screens */
+@media (max-width: 768px) {
+    .filters-container {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .filters {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .filter-dropdown {
+        width: 100%;
+    }
+}
+
+
+
+

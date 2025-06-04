@@ -1,0 +1,197 @@
+/* General Container */
+.purchase-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f7f7;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  /* Outer Box */
+  .purchase-box {
+    display: flex;
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    width: 90%;
+    max-width: 1100px;
+    gap: 30px;
+    margin-top: 6%;
+  }
+  
+  /* Left Section - Form */
+  .purchase-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .purchase-left h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  
+  .purchase-left p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  /* Form Styling */
+  .purchase-left form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .purchase-left input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  
+  /* Hidden Submit Button (For Enter Key Submission) */
+  .hidden-submit {
+    display: none;
+  }
+  
+  /* Vertical Divider */
+  .divider {
+    width: 1px;
+    background-color: #ddd;
+    height: 100%;
+  }
+  
+  /* Right Section */
+  .purchase-right {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  /* Car & Policy Details */
+  .car-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .car-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .policy-details {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .insurance-logo {
+    width: 80px;
+  }
+  
+  /* Policy Start Date Button */
+  .policy-start-date {
+    background: #04cb66;
+    color: white;
+    padding: 8px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  
+  /* Accident Insurance Section */
+  .accident-insurance {
+    background: #eaf8f4;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+  }
+  
+  .mandatory-btn {
+    background: #04cb66;
+    color: white;
+    padding: 6px;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+  
+  .purchaseplan-insurance-options {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  /* Premium Details */
+  .premium-details {
+    margin-top: 15px;
+  }
+  
+  .premium-details p {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .final-premium {
+    font-size: 18px;
+    color: #04cb66;
+  }
+  
+  /* Buy Button */
+  .buy-button {
+    background: #28a745;
+    color: white;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .buy-button:hover {
+    background: #218838;
+  }
+  
+  /* Terms */
+  .terms {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .terms a {
+    color: #04cb66;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .purchase-box {
+      flex-direction: column;
+      padding: 20px;
+    }
+  
+    .divider {
+      display: none;
+    }
+  
+    .purchase-left,
+    .purchase-right {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  

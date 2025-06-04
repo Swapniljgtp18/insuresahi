@@ -1,0 +1,153 @@
+
+/* carinsure */
+
+
+/* Background Styling */
+.car-insurance-container {
+  background: linear-gradient(to right, #f0fdfa, #e8fbf4);
+}
+
+/* Flexbox Wrapper */
+.car-insurance-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Left Side - Heading */
+.car-insurance-left {
+  flex: 1;
+  max-width: 50%;
+}
+
+.car-insurance-left h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #0D1B2A;
+  font-size: 70px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 88px;
+  /* 125.714% */
+  letter-spacing: -1.4px;
+}
+
+/* Right Side - Form */
+.car-insurance-right {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.car-insurance-box {
+
+  padding: 30px;
+  border-radius: 10px;
+
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  border-radius: 24px;
+  border: 1.5px solid rgba(25, 173, 98, 0.20);
+  background: #F3FFF9;
+}
+
+/* Input Field */
+.car-insurance-input {
+  border: 1px solid #19AD62 !important;
+  border-radius: 40px !important;
+  padding: 12px !important;
+  font-size: 16px !important;
+  width: 100% !important;
+  margin-bottom: 10px !important;
+
+
+  background: #FFF;
+}
+
+/* Price Text */
+.car-insurance-price {
+ 
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* View Prices Button */
+
+.car-insurance-button {
+background-color: #28a745 !important;
+  border: none  !important;
+  padding: 14px 24px !important;
+  font-size: 16px  !important;
+  border-radius: 25px  !important;
+  transition: background 0.3s ease  !important;
+  width: 222px !important;
+}
+
+
+
+.car-insurance-button:hover {
+  background-color: #218838;
+}
+
+/* Stats Section */
+.car-insurance-stats {
+  margin-top: 50px;
+}
+
+/* Stats Text */
+.car-insurance-stat-number {
+  color: #28a745;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.car-insurance-stat-text {
+  color: #555;
+  font-size: 14px;
+}
+
+/* 🚀 Mobile Responsive Fix */
+@media (max-width: 992px) {
+  .car-insurance-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .car-insurance-left,
+  .car-insurance-right {
+    max-width: 100%;
+  }
+
+  .car-insurance-right {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .car-insurance-left h2 {
+    font-size: 24px;
+  }
+
+  .car-insurance-box {
+    padding: 20px;
+  }
+
+  .car-insurance-stats {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .car-insurance-stat-number {
+    font-size: 20px;
+  }
+
+  .car-insurance-stat-text {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,971 @@
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 5px;
+  
+  
+}
+
+.navbar-brand img {
+  width: auto;
+  max-height: 25px;
+  padding: 0px 0px;
+  margin-top: 12px;
+}
+
+.bg-darks {
+  width: 100%;
+  background-color: white !important;
+  padding: 0px 30px;
+  border-radius: 15px;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s ease-in-out; 
+  position: relative;
+
+  display: flex;
+  align-items: center; /* Centers items vertically */
+  justify-content: space-between; /* Ensures proper spacing */
+}
+
+.navbar-light .navbar-nav .nav-link {
+  font-size: 15px;
+  color: black;
+  transition: all 0.3s ease-in-out;
+  padding: 20px 15px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #26cd79 !important;
+  text-decoration: none;
+}
+
+.active {
+  color: #26cd79 !important;
+}
+
+.navbar-light .navbar-nav .active .nav-link {
+  color: #1e5d87 !important;
+}
+
+.bg-dark.scrolled {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff !important;
+}
+
+.bg-dark.scrolled .nav-link {
+  color: #111111;
+  font-size: 15px;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+/* ====== NAV BAR DROPDOWN ====== */
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+  margin-top: 0px;
+  background: #fffdf2;
+  border: none;
+  border-radius: 0;
+  overflow: hidden;
+  padding: 0px;
+  transition: all 0.1s ease-in-out;
+  border-top: 3px solid green;
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu.dropdownscrolled {
+  margin-top: 0px;
+}
+
+.dropdown-menu .dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 15px 10px;
+  clear: both;
+  font-weight: 400;
+  color: black;
+  text-align: left;
+  white-space: nowrap;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  color: #ffffff;
+  white-space: nowrap;
+  background-color: rgb(4, 203, 102);
+}
+
+.dropdown-menu .dropdown-item::before {
+  content: "-";
+  font-weight: bold;
+  color: #ffffff;
+  padding-right: 5px;
+  margin-left: -5px;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.dropdown-menu .dropdown-item:hover::before {
+  content: "-";
+  font-weight: bold;
+  color: #ffffff;
+  padding-right: 10px;
+  margin-left: 3px;
+  opacity: 1;
+}
+
+.dropdown-menu a {
+  font-size: 15px;
+}
+
+
+/*# sourceMappingURL=bootstrap-reboot.css.map */
+.navbar-light .navbar-nav .nav-link {
+  font-size: 15px;
+  color: pink;
+  transition: all 0.3s ease-in-out;
+  padding: 20px 16px !important;
+  padding-right: 27px;
+  padding-left: 27px;
+  font-weight: 600;
+}
+
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0) !important;
+}
+
+
+@media (min-width: 320px) and (max-width: 575.98px) {
+  .navbar-light .navbar-toggler {
+    color: rgba(0, 0, 0, 0.5);
+    border: 0px;
+    padding-right: 15px;
+    position: absolute;
+    right: 0;
+    top: 4px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 575.98px) {
+  .navbar-brand img {
+    width: auto;
+    max-height: 25px;
+    padding: 0px 0px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+
+  .sidebar {
+    position: relative;
+    left: -136px;
+    margin-top: 34px;
+  }
+
+  .navbar-light .navbar-nav .nav-link {
+    padding: 8px 16px !important;
+  }
+
+  .user {
+    margin-left: 31px;
+  }
+}
+
+
+/* Align buttons normally on desktop */
+.navbar-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+}
+
+/* Responsive: Stack Buttons Below Menu on Mobile */
+@media (max-width: 992px) {
+  .navbar-buttons {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      margin-top: 10px;
+  }
+
+  .signup-button, .login-button {
+      width: 90%; /* Make buttons full-width on mobile */
+      text-align: center;
+      padding: 10px;
+  }
+}
+/* Navbar Buttons (Desktop) */
+.navbar-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+}
+
+/* Sign Up Button */
+.signup-button {
+  background-color: transparent;
+  border: 2px solid #0f1926;
+  color: #0f1926;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.signup-button:hover {
+  background-color: #0f1926;
+  color: white;
+}
+
+/* Log In Button */
+.login-button {
+  background-color: #0f1926;
+  border: 2px solid #0f1926;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.login-button:hover {
+  background-color: white;
+  color: #0f1926;
+}
+
+/* 🔹 Responsive Fix: Stack Buttons Below Menu on Mobile */
+@media (max-width: 768px) {
+  .navbar-buttons {
+      flex-direction: row; /* Keep buttons in a row on mobile */
+      justify-content: flex-start;
+      gap: 10px;
+      width: 100%;
+      margin-top: 10px;
+  }
+
+  .signup-button, .login-button {
+      width: auto; /* Avoid full width */
+      padding: 8px 16px; /* Reduce padding for better fit */
+      min-width: 100px; /* Keep buttons compact */
+  }
+}
+
+
+/* ====== 1.2 - NAV BAR ENDS ====== */
+
+
+
+/* ====== 1.4 - FOOTER STARTS ====== */
+footer {
+  background: #0d1b2a url(../public/images/footer_bg.html) no-repeat top center;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 60px 0px 0px 0px;
+}
+
+footer p {
+  padding: 0;
+  color: #999999;
+  letter-spacing: 0.5px;
+  font-size: 15px;
+}
+
+.adres {
+  color: #ffffff;
+  padding-bottom: 10px;
+}
+
+footer li,
+footer a {
+  color: #999999;
+  font-size: 15px;
+  padding: 5px 0;
+  letter-spacing: 0.5px;
+  transition: all 0.2s ease-in-out;
+}
+
+footer a:hover {
+  text-decoration: none !important;
+  color: #26cd79;
+  padding-left: 6px;
+}
+
+footer h4,
+footer h5 {
+  color: #ffffff;
+  line-height: 1.7rem;
+}
+
+footer .copyright {
+  margin-top: 60px;
+  border-top: 1px solid #333333;
+  padding: 20px 0px;
+}
+
+footer .copyright p {
+  color: #666666;
+}
+
+.copyright-links ul {
+  float: left;
+}
+
+.copyright-links ul li {
+  display: inline;
+  padding-right: 20px;
+}
+
+.copyright-links ul li a {
+  color: #666666;
+  transition: all 0.1s ease-in-out;
+  padding: 0;
+}
+
+.copyright-links ul li a:hover {
+  color: #cccccc;
+  padding: 0;
+}
+
+.copyright-social ul {
+  float: right;
+}
+
+.copyright-social ul li {
+  width: 35px;
+  display: inline-block;
+  padding: 0px 0px 0px 10px;
+}
+
+.copyright-social ul li a {
+  padding: 0;
+  opacity: 0.4;
+  transition: all 0.3s ease-in-out;
+}
+
+.copyright-social ul li a:hover {
+  opacity: 1;
+}
+
+
+.footer-sec li a {
+  text-decoration: none;
+}
+
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  /* Ensures links are centered within their container */
+  gap: 30px;
+  /* Sets gap between each link */
+}
+
+.footer-links a {
+  color: white;
+  /* Ensures links are white */
+  text-decoration: none;
+  /* Removes underline from links */
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+  /* Adds underline on hover for better UX */
+}
+
+
+
+footer {
+  display: block;
+}
+
+
+
+/* ====== 1.4 - FOOTER ENDS ====== */
+
+
+/* unique */
+
+.unique-hero-section {
+  background: linear-gradient(160deg, rgba(204, 255, 244, 0.7), rgba(232, 245, 233, 0.7));
+  color: #333;
+  padding: 40px 0;
+  /* mobile purpose */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.unique-hero-title {
+  font-size: 48px;
+  /* Large font size for impact */
+  font-weight: 700;
+  /* Bold font weight */
+  color: #0D1B2A;
+}
+
+.unique-hero-subtitle {
+  font-size: 24px;
+  font-weight: 300;
+  
+}
+
+.unique-hero-description {
+  margin-bottom: 1rem;
+  color: #909AA8;
+}
+
+.unique-hero-button {
+  background-color: #28a745;
+  width: 222px;
+  height: 72px;
+  padding: 14px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+  border-radius: 100px;
+  color: white;
+  border: transparent;
+
+}
+
+.unique-hero-stats h3 {
+  font-size: 32px;
+  color: #0D1B2A;
+}
+
+.unique-hero-stats p {
+  color: #666;
+}
+
+@media (max-width: 768px) {
+
+  .unique-hero-title,
+  .unique-hero-subtitle,
+  .unique-hero-stats h3 {
+    font-size: 24px;
+   
+  }
+
+  .unique-hero-stats p {
+    font-size: 16px;
+  }
+}
+
+p {
+  font-size: 15px;
+  color: #333333;
+  line-height: 1.7rem;
+  padding: 0;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+h1 {
+  font-size: 2.75rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.title-center {
+  text-align: center;
+  padding-bottom: 60px;
+}
+
+.title-center h2 {
+  padding-bottom: 20px;
+}
+
+/* India’s Most Trusted Insurance */
+.bg-img-right-half {
+  background: #f2efe1 url(../public/images/city_bg.png) no-repeat center center;
+  background-size: cover;
+}
+
+
+/* feedback container */
+
+.feedback-container {
+  background:  rgba(197, 255, 225, 0.20);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.feedback-heading {
+  color: #0D1B2A;
+  font-size: 48px;
+ 
+}
+
+.feedback-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-rating {
+  color: #04CB66;
+
+  font-size: 28px;
+  width: 28px;
+  height: 28px;
+  margin-bottom: 22px;
+}
+
+.feedback-author {
+  font-weight: bold;
+}
+
+.feedback-prev-button,
+.feedback-next-button {
+    width: 60px;  /* Circle size */
+    height: 60px;
+    border-radius: 50%;  /* Makes it circular */
+    background-color: #0f1926;  /* Dark navy color */
+    color: white;  /* White arrow color */
+    font-size: 24px;
+    border: none;  /* No border */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+/* Hover Effect */
+.feedback-prev-button:hover,
+.feedback-next-button:hover {
+    background-color: #16202d;  /* Slightly lighter navy on hover */
+}
+
+/* Active (Click) Effect */
+.feedback-prev-button:active,
+.feedback-next-button:active {
+    transform: scale(0.9);  /* Slight shrink effect when clicked */
+}
+
+/* Button container: Side by side on large screens, stacked on small screens */
+.feedback-button-container {
+    display: flex;
+    gap: 16px;  /* Space between buttons */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsive: Stack buttons vertically on small screens */
+@media (max-width: 576px) {
+    .feedback-button-container {
+        flex-direction: column;  /* Stack buttons */
+        gap: 10px;  /* Reduce space between buttons */
+    }
+}
+
+
+/* Talk to Our Experts */
+.gradient-wrapper {
+  background: linear-gradient(180deg, #04CB66 0%, #0D1B2A 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.consultation-row {
+  width: 90%;
+  max-width: 1200px;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Ensure the card has no additional background styles that might interfere */
+.consultation-card {
+  background: none;
+  border: none;
+  padding: 20px;
+}
+
+/* Image Styling */
+.consultation-img-col img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding: 4%;
+  border-radius: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Form and Input Styling */
+.consultation-input,
+.consultation-select {
+  border: 1px solid #ccc;
+  border-radius: 18px;
+  padding: 10px;
+ width: 100%;
+
+}
+
+/* Button Styling */
+.talk-to-submit {
+  background-color: #28a745;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 20px;
+  font-size: 18px;
+  cursor: pointer;
+  width: 100%;
+
+  /* display: flex;
+width: 447px;
+height: 60px;
+padding: 14px 24px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+flex-shrink: 0; */
+
+}
+
+.talk-to-submit:hover {
+  background-color: green;
+
+}
+
+.consultation-form-col {
+  border: none !important;
+  border-radius: 20px !important;
+}
+
+
+
+/* filters */
+.unique-container-wrapper {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header Section */
+.unique-header-section {
+  text-align: left;
+}
+
+.unique-header-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.unique-main-heading {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.unique-highlight-text {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.unique-header-description {
+  text-align: right;
+}
+
+.unique-header-paragraph {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Filters Section */
+.unique-filters-wrapper {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.unique-filters-form {
+  width: 100%;
+}
+
+.unique-filter-column {
+  padding: 10px;
+}
+
+.unique-filter-group {
+  margin-bottom: 10px;
+}
+
+.unique-filter-label {
+  font-weight: bold;
+}
+
+.unique-filter-select {
+  all: unset;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  background-color: white;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Cards Section */
+.unique-cards-wrapper {
+  margin-top: 20px;
+}
+
+.unique-card-column {
+  display: flex;
+  justify-content: center;
+}
+
+.unique-card-box {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.unique-card-image {
+  height: 200px;
+  object-fit: cover;
+}
+
+.unique-card-content {
+  padding: 15px;
+}
+
+.unique-card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.unique-card-text {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Button */
+.unique-card-button {
+  background-color: #28a745 !important;
+  color: white !important;
+  border: none !important;
+  padding: 10px 15px !important;
+  border-radius: 5px !important;
+  font-weight: bold !important;
+  cursor: pointer !important;
+}
+
+.unique-card-button:hover {
+  background-color: #218838 !important;
+}
+
+
+
+   /* Insurance Selection Modal */
+
+.blur-background {
+  filter: blur(0px);
+  pointer-events: none;
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 998; /* Ensures it stays behind the modal */
+}
+
+/* Ensure modal is clear and on top */
+.insurance-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 400px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1000 ; /* Above the blurred background, below modal */
+  filter: none;
+}
+
+/* Keep text sharp */
+.insurance-modal h2, 
+.insurance-options, 
+.option {
+  filter: none; /* Remove blur */
+  color: #000; /* Darken text */
+  font-weight: 600; /* Make it bold */
+  margin-bottom: 1vh;
+}
+
+/* Reduce font size of the heading */
+.insurance-modal h2 {
+  font-size: 1.5rem; /* Adjust as needed */
+}
+
+/* Modal background overlay */
+.insurance-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  
+  z-index: 1000; /* Below the modal, above the blurred content */
+}
+
+/* Insurance options inside the modal */
+.insurance-options {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  filter: blur(0px);
+  gap: 1vw;
+  flex-wrap: wrap;
+}
+
+.option {
+  
+  border: 2px solid #04CB66;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  filter: blur(-4px);
+  text-decoration: none ;
+
+  padding: 2vh 1vw; /* Responsive padding */
+  width: min(30%, 150px); /* Adjust size based on screen width */
+}
+
+.option img {
+  margin-bottom: 1vh; /* Responsive space */
+  max-width: 100%; /* Ensure images resize properly */
+  height: auto;
+}
+
+.option:hover {
+  background: #04CB66;
+  color: white;
+}
+
+/* Close button styling */
+.close-btn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  
+}
+
+
+/* ------------------------------------------------------------------------------ */
+/* logo and name  */
+/* NAVBAR BRAND CONTAINER */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* LOGO IMAGE */
+.logo-img {
+  width: 40px;  /* Adjust size as needed */
+  height: auto;
+}
+
+/* SITE NAME IMAGE */
+.site-name-img {
+  width: 120px;  /* Adjust size as needed */
+  height: auto;
+  margin-left: 8px;  /* Minimal gap between logo and name */
+}
+
+
+
+.custom-text {
+  max-width: 500px;  /* Controls text width for proper wrapping */
+  line-height: 1.6;  /* Adjusts spacing between lines */
+  word-break: break-word; /* Ensures words break properly */
+}
+
+.mt-6 { margin-top: 72px !important; }
+.mt-7 { margin-top: 96px !important; }
+.mt-8 { margin-top: 120px !important; }
