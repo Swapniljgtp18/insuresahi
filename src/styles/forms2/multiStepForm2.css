@@ -305,3 +305,17 @@
     color: red !important;
   }
   
+  .popup-box {
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  .popup-text {
+    font-size: 16px;
+    color: #444;
+    margin: 1rem 0 1.5rem;
+  }
+  

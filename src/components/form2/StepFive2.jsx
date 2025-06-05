@@ -1,14 +1,25 @@
 import React, { useState } from "react";
-import { Card, Form } from "react-bootstrap";
-import "../../styles/forms2/multiStepForm2.css"; // Import CSS
+import { Card, Form, Modal } from "react-bootstrap";
+import "../../styles/forms2/multiStepForm2.css";
+
+import { useNavigate } from "react-router-dom";
+
+
 
 const StepFive2 = ({ prevStep, formData, handleChange }) => {
   const [error, setError] = useState("");
+  const [showPopup, setShowPopup] = useState(false);
   const cities = ["Ahmedabad", "Mumbai", "Bangalore", "Pune"];
+  const navigate = useNavigate();
 
   const handleCitySelect = (city) => {
     handleChange({ target: { name: "currentCity", value: city } });
     if (error) setError("");
+  };
+
+  const handleContinue = () => {
+    setShowPopup(false);
+    navigate("/");
   };
 
   const handleSubmit = async () => {
@@ -48,7 +59,7 @@ const StepFive2 = ({ prevStep, formData, handleChange }) => {
       const result = await response.json();
 
       if (result.result === "success") {
-        alert("Health data saved successfully!");
+        setShowPopup(true); // Show modal instead of alert
       } else {
         console.error("Server error:", result.message);
         alert("Failed to save data. Server returned an error.");
@@ -115,6 +126,20 @@ const StepFive2 = ({ prevStep, formData, handleChange }) => {
           </button>
         </div>
       </Card>
+
+      {/* Modal Popup */}
+      <Modal show={showPopup} onHide={() => setShowPopup(false)} centered>
+        <Modal.Body className="popup-box text-center">
+          <h5><strong>Thank You</strong></h5>
+          <p className="popup-text">
+            For providing the details. Someone from our team will get back to you soon to assist you further.
+            We appreciate your patience!
+          </p>
+          <button className="steps-next-btn2" onClick={handleContinue}>
+            Continue
+          </button>
+        </Modal.Body>
+      </Modal>
     </div>
   );
 };

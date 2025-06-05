@@ -4,6 +4,7 @@ import "../../styles/forms/multiStepForm.css";
 
 const WelcomeStep = ({ nextStep, setChooseMembers }) => {
     const [selectedMembers, setSelectedMembers] = useState([]);
+    const [error, setError] = useState(false);
     const members = ["Self", "Wife", "Son", "Daughter", "Father", "Mother", "Grand Father", "Grand Mother"];
 
     const handleMemberSelect = (member) => {
@@ -12,19 +13,26 @@ const WelcomeStep = ({ nextStep, setChooseMembers }) => {
         } else {
             setSelectedMembers([...selectedMembers, member]);
         }
+        setError(false); // clear error when selecting
+    };
+
+    const handleContinue = () => {
+        if (selectedMembers.length === 0) {
+            setError(true);
+            return;
+        }
+        setChooseMembers(selectedMembers);
+        nextStep();
     };
 
     return (
         <Card className="step-card">
-            {/* 🔹 Heading */}
             <h2 className="text-center mb-2 welcome-heading">
                 Find Top Plans For You With Up To <span className="discount-text">25% Discount</span>
             </h2>
-
             <p className="text-center step-subtitle">Select Members You Want To Insure</p>
 
-            {/* 🔹 Member Selection Buttons */}
-            <div className="member-selection">
+            <div className="member-selection position-relative">
                 {members.map((member) => (
                     <button
                         key={member}
@@ -35,29 +43,25 @@ const WelcomeStep = ({ nextStep, setChooseMembers }) => {
                         {member}
                     </button>
                 ))}
+               
             </div>
 
-            {/* 🔹 View More Members Link */}
             <p className="text-center view-more-text">View More Members</p>
 
-            {/* 🔹 Continue Button */}
+            {error && (
+                    <span className="error-text">Please select at least one member</span>
+                )}
+
             <div className="button-container">
                 <button
-                    onClick={() => {
-                        setChooseMembers(selectedMembers); // Pass selected members to parent
-                        nextStep(); // Go to next step
-                    }}
+                    onClick={handleContinue}
                     className="steps-next-btn"
                     type="button"
                 >
                     Continue
                 </button>
-
-
-               
             </div>
 
-            {/* 🔹 Terms & Conditions */}
             <p className="terms-text text-center">
                 By Clicking On Continue, I Agree To The <span className="terms-link">Terms & Conditions</span> & Disclaimers
             </p>

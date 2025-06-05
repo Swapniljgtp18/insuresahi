@@ -1,16 +1,25 @@
 import React, { useState } from "react";
-import { Form, Button, Card } from "react-bootstrap";
+import { Form, Card } from "react-bootstrap";
 
 const StepTwo = ({ nextStep, prevStep, handleChange, formData }) => {
-
   const [selectedCity, setSelectedCity] = useState(formData.city || "");
-
+  const [error, setError] = useState("");
 
   const cities = ["Ahmedabad", "Mumbai", "Bangalore", "Pune"];
 
   const handleCitySelect = (city) => {
     setSelectedCity(city);
     handleChange({ target: { name: "city", value: city } });
+    setError(""); // Clear error when valid selection is made
+  };
+
+  const handleNext = (e) => {
+    e.preventDefault();
+    if (!selectedCity) {
+      setError("Please select a city");
+    } else {
+      nextStep();
+    }
   };
 
   return (
@@ -28,10 +37,11 @@ const StepTwo = ({ nextStep, prevStep, handleChange, formData }) => {
         <Form.Group className="mb-3">
           <Form.Control
             type="text"
-            placeholder="Search City"
+            placeholder={error ? error : "Search City"}
             name="searchCity"
             onChange={handleChange}
-            className="rounded-input"
+            className={`rounded-input ${error ? "error-input" : ""}`}
+            isInvalid={!!error}
           />
         </Form.Group>
 
@@ -52,7 +62,7 @@ const StepTwo = ({ nextStep, prevStep, handleChange, formData }) => {
           <button onClick={prevStep} className="steps-back-btn" type="button">
             Back
           </button>
-          <button onClick={nextStep} className="steps-next-btn" type="button">
+          <button onClick={handleNext} className="steps-next-btn" type="button">
             Next
           </button>
         </div>
