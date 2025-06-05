@@ -299,3 +299,9 @@
         justify-content: flex-end; /* 🔹 Keeps "Next" aligned right on mobile too */
     }
 }
+
+
+.placeholder-red::placeholder {
+    color: red !important;
+  }
+  

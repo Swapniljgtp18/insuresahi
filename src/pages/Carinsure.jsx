@@ -6,15 +6,16 @@ import "../styles/carinsure.css";
 const Carinsure = () => {
     const navigate = useNavigate();
     const [carNumber, setCarNumber] = useState(""); 
+    const [error, setError] = useState(false); 
 
-   
     const scriptURL = "https://script.google.com/macros/s/AKfycbwcBTWjiJY7-zIbo88D-euwKoMNx4KrLPsbw9Beq2n771A--qkyCWr8Wtbves0JtxMIcQ/exec";
 
-    
     const submitCarNumber = async () => {
         if (!carNumber.trim()) {
-            alert("Please enter a valid car number!");
+            setError(true);
             return;
+        } else {
+            setError(false);
         }
     
         const dataToSend = { carNumber };
@@ -31,7 +32,6 @@ const Carinsure = () => {
     
             console.log("Data submitted, but no response due to no-cors mode.");
     
-            // ✅ Since "no-cors" prevents a response, just show success message
             alert("Car number saved successfully!");
             navigate("/"); 
     
@@ -64,10 +64,13 @@ const Carinsure = () => {
                                 <Form.Group>
                                     <Form.Control
                                         type="text"
-                                        className="car-insurance-input"
-                                        placeholder="Enter vehicle number ( Ex: MH-15-AB-1234 )"
-                                        value={carNumber}
-                                        onChange={(e) => setCarNumber(e.target.value)}
+                                        className={`car-insurance-input ${error ? "is-invalid" : ""}`}
+                                        placeholder={error ? "Please enter a valid car number!" : "Enter vehicle number ( Ex: MH-15-AB-1234 )"}
+                                        value={error ? "" : carNumber}
+                                        onChange={(e) => {
+                                            setCarNumber(e.target.value);
+                                            if (error) setError(false);
+                                        }}
                                     />
                                 </Form.Group>
                                 <p className="car-insurance-price">

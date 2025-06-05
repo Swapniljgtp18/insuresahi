@@ -1,15 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { Card, Form } from "react-bootstrap";
 import "../../styles/forms2/multiStepForm2.css"; // Import CSS
 
 const StepFive2 = ({ prevStep, formData, handleChange }) => {
+  const [error, setError] = useState("");
   const cities = ["Ahmedabad", "Mumbai", "Bangalore", "Pune"];
 
   const handleCitySelect = (city) => {
     handleChange({ target: { name: "currentCity", value: city } });
+    if (error) setError("");
   };
 
   const handleSubmit = async () => {
+    if (!formData.currentCity) {
+      setError("Please select a city");
+      return;
+    }
+    setError("");
+
     const payload = {
       type: "health",
       healthData: {
@@ -31,10 +39,9 @@ const StepFive2 = ({ prevStep, formData, handleChange }) => {
         {
           method: "POST",
           headers: {
-            "Content-Type": "application/x-www-form-urlencoded"
+            "Content-Type": "application/x-www-form-urlencoded",
           },
           body: JSON.stringify(payload),
-          
         }
       );
 
@@ -61,7 +68,14 @@ const StepFive2 = ({ prevStep, formData, handleChange }) => {
           ))}
         </div>
 
-        <h4 className="text-center step-heading2">Please Select Your Current City</h4>
+        <h4 className="text-center step-heading2">
+          Please Select Your Current City
+          {error && (
+            <span style={{ color: "red", fontSize: "14px", marginLeft: "10px" }}>
+              {error}
+            </span>
+          )}
+        </h4>
 
         <Form.Group className="input-container2">
           <Form.Control
@@ -93,10 +107,10 @@ const StepFive2 = ({ prevStep, formData, handleChange }) => {
         </div>
 
         <div className="button-container2">
-          <button onClick={prevStep} className="steps-back-btn2">
+          <button onClick={prevStep} className="steps-back-btn2" type="button">
             Back
           </button>
-          <button onClick={handleSubmit} className="steps-next-btn2">
+          <button onClick={handleSubmit} className="steps-next-btn2" type="button">
             View Plans
           </button>
         </div>

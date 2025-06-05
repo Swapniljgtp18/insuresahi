@@ -1,12 +1,28 @@
 import React, { useState } from "react";
 import { Card } from "react-bootstrap";
-import "../../styles/forms2/multiStepForm2.css"; // Import CSS
+import "../../styles/forms2/multiStepForm2.css"; 
 
 const StepThree2 = ({ nextStep, prevStep, formData, handleChange }) => {
+  const [errors, setErrors] = useState({});
+
   const handleSelection = (level) => {
     handleChange({ target: { name: "educationalQualification", value: level } });
+    if (errors.educationalQualification) {
+      setErrors((prev) => ({ ...prev, educationalQualification: "" }));
+    }
   };
 
+  const handleNext = () => {
+    const newErrors = {};
+    if (!formData.educationalQualification) {
+      newErrors.educationalQualification = "Please select your qualification";
+    }
+
+    setErrors(newErrors);
+    if (Object.keys(newErrors).length === 0) {
+      nextStep();
+    }
+  };
 
   return (
     <div className="form-wrapper2">
@@ -21,31 +37,42 @@ const StepThree2 = ({ nextStep, prevStep, formData, handleChange }) => {
         </div>
 
         {/* 🔹 Heading */}
-        <h4 className="text-center step-heading2">Select Educational Qualification</h4>
+        <h4 className="text-center step-heading2">
+          Select Educational Qualification
+          {errors.educationalQualification && (
+            <span style={{ color: "red", fontSize: "14px", marginLeft: "10px" }}>
+              {errors.educationalQualification}
+            </span>
+          )}
+        </h4>
 
         {/* 🔹 Selection Buttons */}
         <div className="selection-container2 grid-layout">
           <button
             className={`selection-btn2 ${formData.educationalQualification === "College Graduate & Above" ? "selected" : ""}`}
             onClick={() => handleSelection("College Graduate & Above")}
+            type="button"
           >
             College Graduate & Above
           </button>
           <button
             className={`selection-btn2 ${formData.educationalQualification === "12th Pass" ? "selected" : ""}`}
             onClick={() => handleSelection("12th Pass")}
+            type="button"
           >
             12th Pass
           </button>
           <button
             className={`selection-btn2 ${formData.educationalQualification === "10th Pass" ? "selected" : ""}`}
             onClick={() => handleSelection("10th Pass")}
+            type="button"
           >
             10th Pass
           </button>
           <button
             className={`selection-btn2 ${formData.educationalQualification === "Below 10th" ? "selected" : ""}`}
             onClick={() => handleSelection("Below 10th")}
+            type="button"
           >
             Below 10th
           </button>
@@ -56,7 +83,7 @@ const StepThree2 = ({ nextStep, prevStep, formData, handleChange }) => {
           <button onClick={prevStep} className="steps-back-btn2" type="button">
             Back
           </button>
-          <button onClick={nextStep} className="steps-next-btn2" type="button">
+          <button onClick={handleNext} className="steps-next-btn2" type="button">
             Next
           </button>
         </div>
