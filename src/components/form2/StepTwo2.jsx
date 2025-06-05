@@ -2,11 +2,27 @@ import React, { useState } from "react";
 import { Card, Form } from "react-bootstrap";
 import "../../styles/forms2/multiStepForm2.css"; // Import CSS
 
-
-
-// 🔹 State to store income input
 const StepTwo2 = ({ nextStep, prevStep, formData, handleChange }) => {
+  const [errors, setErrors] = useState({});
 
+  const validateForm = () => {
+    const newErrors = {};
+
+    if (!formData.annualIncome || formData.annualIncome.toString().trim() === "") {
+      newErrors.annualIncome = "Annual Income is required";
+    } else if (Number(formData.annualIncome) <= 0) {
+      newErrors.annualIncome = "Income must be greater than 0";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleNext = () => {
+    if (validateForm()) {
+      nextStep();
+    }
+  };
 
   return (
     <div className="form-wrapper2">
@@ -27,15 +43,12 @@ const StepTwo2 = ({ nextStep, prevStep, formData, handleChange }) => {
         <Form.Group className="input-container2">
           <Form.Control
             type="number"
-            placeholder="Income in Rupees"
+            placeholder={errors.annualIncome ? errors.annualIncome : "Income in Rupees"}
             name="annualIncome"
             value={formData.annualIncome || ""}
-
             onChange={handleChange}
-            className="input-field2"
+            className={`input-field2 ${errors.annualIncome ? "border-danger text-danger placeholder-red" : ""}`}
           />
-
-
         </Form.Group>
 
         {/* 🔹 Navigation Buttons */}
@@ -43,7 +56,7 @@ const StepTwo2 = ({ nextStep, prevStep, formData, handleChange }) => {
           <button onClick={prevStep} className="steps-back-btn2" type="button">
             Back
           </button>
-          <button onClick={nextStep} className="steps-next-btn2" type="button">
+          <button onClick={handleNext} className="steps-next-btn2" type="button">
             Next
           </button>
         </div>
